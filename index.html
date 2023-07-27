@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Usernames</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Admin Usernames</h1>
+        </div>
+
+        <div class="form">
+            <textarea id="channel-username" placeholder="Enter channel usernames (one per line)"></textarea>
+        </div>
+
+        <div class="button-container">
+            <div>
+                <button onclick="getAdminUsernames()">Get Admin Usernames</button>
+                <button id="reset-button" onclick="resetForm()" style="display: none;">Reset</button>
+            </div>
+        </div>
+
+        <div id="table-container" class="table-container"></div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div id="loading-overlay"></div>
+        <div id="loading-spinner"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <footer>
+        <p>Developed with love by Pixel Wizard</p>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p><a href="https://www.buymeacoffee.com/PixelWizard" target="_blank">Buy Me A Coffee</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form class="login-form" action="login.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="password-visibility-button" onclick="togglePasswordVisibility()">Show</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="extra-options">
+            <a href="forgot-password.html">Forgot Password?</a> | <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+    <footer>
+        <p>Developed with love by Pixel Wizard</p>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p><a href="https://www.buymeacoffee.com/PixelWizard" target="_blank">Buy Me A Coffee</a></p>
+    </footer>
+</body>
+</html>

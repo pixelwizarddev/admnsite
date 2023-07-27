@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirm-password");
+
+            if (passwordInput.type === "password" && confirmPasswordInput.type === "password") {
+                passwordInput.type = "text";
+                confirmPasswordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+                confirmPasswordInput.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form class="signup-form" action="signup.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="telegram">Telegram Username:</label>
+                <input type="text" id="telegram" name="telegram" placeholder="Enter your Telegram username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-input">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="password-visibility-button" onclick="togglePasswordVisibility()">Show</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <div class="password-input">
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="extra-options">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <footer>
+        <p>Developed with love by Pixel Wizard</p>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+        <p><a href="https://www.buymeacoffee.com/PixelWizard" target="_blank">Buy Me A Coffee</a></p>
+    </footer>
+</body>
+</html>
